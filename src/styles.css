@@ -1,1 +1,176 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles for Positivus landing page */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+/* Import Google Font */
+
+:root {
+  --font-main: "Space Grotesk", sans-serif;
+  --color-primary: #b9ff66;
+  --color-text: #333;
+  --color-background: #ffffff;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+body {
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: #eee;
+}
+
+/* Container for main content */
+.container {
+  border: 1px solid #000;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: var(--color-background);
+}
+
+/* Typography */
+h1 {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 76.56px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 51.04px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 38.28px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 22.97px;
+}
+
+/* Header styles */
+header {
+  background-color: #ffffff;
+  padding: 1rem 0;
+}
+
+/* Navigation styles */
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
+}
+
+/* Hero section styles */
+.hero {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  background-color: #b9ff66;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a8e65c;
+}
+
+/* Main content area styles */
+main {
+  padding: 2rem 0;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  /* Add styles for tablets */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 51.04px;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 38.28px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 30.62px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Add styles for smaller mobile devices */
+}
+
+/* Improvement 4: Consider adding print styles */
+@media print {
+  /* Add print-specific styles */
+}
+
+/* Improvement 5: Add focus styles for better accessibility */
+.btn:focus,
+.nav__link:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Improvement 6: Consider adding utility classes for common styles */
+.text-center {
+  text-align: center;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}

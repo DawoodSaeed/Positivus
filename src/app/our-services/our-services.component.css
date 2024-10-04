@@ -1,0 +1,149 @@
+.services {
+  padding: 80px 0;
+}
+
+.services__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.services__title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.services__description {
+  font-size: 16px;
+  max-width: 100%;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .services__header {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .services__title {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+
+  .services__description {
+    font-size: 18px;
+    max-width: 90%;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .services__title {
+    font-size: 60px;
+  }
+
+  .services__description {
+    font-size: 20px;
+  }
+}
+
+.services__header h2 {
+  font-size: 40px;
+  font-weight: 500;
+  background-color: var(--color-primary);
+}
+
+.services__header p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.97px;
+  margin: 0 auto;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.service-box {
+  border-radius: 45px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 310px;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 5px 0px 0px #191a23;
+  border: 1px solid #191a23;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+}
+
+.service-box__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-box .service-box__content h3 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  background: var(--color-primary);
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.learn-more {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #000;
+}
+
+.arrow {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover .arrow {
+  transform: translateX(5px);
+}
+
+.service-box__image {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.service-box__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-box {
+    min-height: auto;
+  }
+}
