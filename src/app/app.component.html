@@ -11,5 +11,14 @@
 
   <app-our-working-process />
 
+  @defer {
   <app-teams />
+  }@loading(minimum 1000ms) {
+  <div class="loading-spinner">
+    <div class="spinner-circle"></div>
+    <div class="spinner-text">Loading amazing team...</div>
+  </div>
+  }@placeholder {
+  <p>loading the team component</p>
+  }
 </div>

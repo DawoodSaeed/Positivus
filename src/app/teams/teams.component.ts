@@ -5,7 +5,6 @@ import { AsyncPipe } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { Observable, forkJoin, of } from 'rxjs';
 import { map } from 'rxjs/operators';
-
 @Component({
   selector: 'app-teams',
   standalone: true,
