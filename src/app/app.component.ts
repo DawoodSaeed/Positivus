@@ -6,11 +6,12 @@ import { OurServicesComponent } from "./our-services/our-services.component";
 import { CallToActionComponent } from "./call-to-action/call-to-action.component";
 import { CaseStudyComponent } from "./case-study/case-study.component";
 import { OurWorkingProcessComponent } from "./our-working-process/our-working-process.component";
+import { TeamsComponent } from "./teams/teams.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HeroComponent, OurServicesComponent, CallToActionComponent, CaseStudyComponent, OurWorkingProcessComponent],
+  imports: [RouterOutlet, HeaderComponent, HeroComponent, OurServicesComponent, CallToActionComponent, CaseStudyComponent, OurWorkingProcessComponent, TeamsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -3,11 +3,12 @@
   background-color: var(--btn-background);
   color: hsl(0, 0%, 100%);
   text-decoration: none;
-  padding: 20px 35px;
+  padding: 10px 25px;
   border-radius: 14px;
   font-weight: 500;
   transition: background-color 0.3s ease;
   font-size: 18px;
+  border: none;
   line-height: 28px;
 }
 
@@ -15,4 +16,10 @@
   background-color: var(--btn-background-hover);
   transform: translateY(-2px);
   cursor: pointer;
+}
+
+@media (min-width: 767px) {
+  .button {
+    padding: 20px 35px;
+  }
 }
