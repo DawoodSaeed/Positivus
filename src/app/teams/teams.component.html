@@ -1,172 +1,175 @@
 <section class="teams">
-  <div class="container">
-    <app-heading
-      title="Team"
-      description="Meet the skilled and experienced team behind our successful digital marketing strategies"
-    ></app-heading>
+  <ng-container *ngIf="imagesLoaded$ | async">
+    <!-- Content will be rendered once images are loaded -->
+    <div class="container">
+      <app-heading
+        title="Team"
+        description="Meet the skilled and experienced team behind our successful digital marketing strategies"
+      ></app-heading>
 
-    <div class="team-grid">
-      <div class="team-member">
-        <div class="member-header">
-          <img
-            src="../../assets/images/team-members/michael_brown.svg"
-            alt="Mike Johnson"
-            class="member-image"
-          />
-          <div class="member-info">
-            <h3 class="member-name">Mike Brown</h3>
-            <p class="member-position">Social Media Specialist</p>
-          </div>
-          <div class="member-icon">
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="member-header">
             <img
-              src="../../assets/images/companies/linkedin.svg"
-              alt="LinkedIn"
+              src="../../assets/images/team-members/michael_brown.svg"
+              alt="Mike Johnson"
+              class="member-image"
             />
+            <div class="member-info">
+              <h3 class="member-name">Mike Brown</h3>
+              <p class="member-position">Social Media Specialist</p>
+            </div>
+            <div class="member-icon">
+              <img
+                src="../../assets/images/companies/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </div>
+          </div>
+          <div class="member-content">
+            <p class="member-bio">
+              Mike's creative campaigns and deep understanding of social media
+              trends have helped our clients build strong online communities and
+              increase engagement.
+            </p>
           </div>
         </div>
-        <div class="member-content">
-          <p class="member-bio">
-            Mike's creative campaigns and deep understanding of social media
-            trends have helped our clients build strong online communities and
-            increase engagement.
-          </p>
+
+        <div class="team-member">
+          <div class="member-header">
+            <img
+              src="../../assets/images/team-members/emily_johnson.svg"
+              alt="Emily Chen"
+              class="member-image"
+            />
+            <div class="member-info">
+              <h3 class="member-name">Emily Johnson</h3>
+              <p class="member-position">Content Strategist</p>
+            </div>
+            <div class="member-icon">
+              <img
+                src="../../assets/images/companies/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </div>
+          </div>
+          <div class="member-content">
+            <p class="member-bio">
+              Emily's talent for crafting compelling narratives and data-driven
+              content strategies has consistently delivered exceptional results
+              for our clients across various industries.
+            </p>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="member-header">
+            <img
+              src="../../assets/images/team-members/john_smith.svg"
+              alt="John Doe"
+              class="member-image"
+            />
+            <div class="member-info">
+              <h3 class="member-name">John Doe</h3>
+              <p class="member-position">CEO & Founder</p>
+            </div>
+            <div class="member-icon">
+              <img
+                src="../../assets/images/companies/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </div>
+          </div>
+          <div class="member-content">
+            <p class="member-bio">
+              With over 15 years of experience in digital marketing, John leads
+              our team with innovative strategies and a passion for client
+              success.
+            </p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-header">
+            <img
+              src="../../assets/images/team-members/jane_doe.svg"
+              alt="Jane Smith"
+              class="member-image"
+            />
+            <div class="member-info">
+              <h3 class="member-name">Jane Smith</h3>
+              <p class="member-position">Head of SEO</p>
+            </div>
+            <div class="member-icon">
+              <img
+                src="../../assets/images/companies/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </div>
+          </div>
+          <div class="member-content">
+            <p class="member-bio">
+              Jane's expertise in SEO has helped numerous businesses achieve top
+              rankings and increase their organic traffic significantly.
+            </p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-header">
+            <img
+              src="../../assets/images/team-members/briane_willaims.svg"
+              alt="Briane Willaims"
+              class="member-image"
+            />
+            <div class="member-info">
+              <h3 class="member-name">Briane Willaims</h3>
+              <p class="member-position">Content Strategist</p>
+            </div>
+            <div class="member-icon">
+              <img
+                src="../../assets/images/companies/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </div>
+          </div>
+          <div class="member-content">
+            <p class="member-bio">
+              Mike's creative approach to content creation has revolutionized
+              how our clients connect with their audience.
+            </p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-header">
+            <img
+              src="../../assets/images/team-members/sarah_kim.svg"
+              alt="Sarah Kim"
+              class="member-image"
+            />
+            <div class="member-info">
+              <h3 class="member-name">Sarah Kim</h3>
+              <p class="member-position">Social Media Specialist</p>
+            </div>
+            <div class="member-icon">
+              <img
+                src="../../assets/images/companies/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </div>
+          </div>
+          <div class="member-content">
+            <p class="member-bio">
+              Sarah's innovative social media strategies have helped our clients
+              build strong online communities and increase brand engagement.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="team-member">
-        <div class="member-header">
-          <img
-            src="../../assets/images/team-members/emily_johnson.svg"
-            alt="Emily Chen"
-            class="member-image"
-          />
-          <div class="member-info">
-            <h3 class="member-name">Emily Johnson</h3>
-            <p class="member-position">Content Strategist</p>
-          </div>
-          <div class="member-icon">
-            <img
-              src="../../assets/images/companies/linkedin.svg"
-              alt="LinkedIn"
-            />
-          </div>
-        </div>
-        <div class="member-content">
-          <p class="member-bio">
-            Emily's talent for crafting compelling narratives and data-driven
-            content strategies has consistently delivered exceptional results
-            for our clients across various industries.
-          </p>
-        </div>
-      </div>
-      <div class="team-member">
-        <div class="member-header">
-          <img
-            src="../../assets/images/team-members/john_smith.svg"
-            alt="John Doe"
-            class="member-image"
-          />
-          <div class="member-info">
-            <h3 class="member-name">John Doe</h3>
-            <p class="member-position">CEO & Founder</p>
-          </div>
-          <div class="member-icon">
-            <img
-              src="../../assets/images/companies/linkedin.svg"
-              alt="LinkedIn"
-            />
-          </div>
-        </div>
-        <div class="member-content">
-          <p class="member-bio">
-            With over 15 years of experience in digital marketing, John leads
-            our team with innovative strategies and a passion for client
-            success.
-          </p>
-        </div>
-      </div>
-
-      <div class="team-member">
-        <div class="member-header">
-          <img
-            src="../../assets/images/team-members/jane_doe.svg"
-            alt="Jane Smith"
-            class="member-image"
-          />
-          <div class="member-info">
-            <h3 class="member-name">Jane Smith</h3>
-            <p class="member-position">Head of SEO</p>
-          </div>
-          <div class="member-icon">
-            <img
-              src="../../assets/images/companies/linkedin.svg"
-              alt="LinkedIn"
-            />
-          </div>
-        </div>
-        <div class="member-content">
-          <p class="member-bio">
-            Jane's expertise in SEO has helped numerous businesses achieve top
-            rankings and increase their organic traffic significantly.
-          </p>
-        </div>
-      </div>
-
-      <div class="team-member">
-        <div class="member-header">
-          <img
-            src="../../assets/images/team-members/briane_willaims.svg"
-            alt="Briane Willaims"
-            class="member-image"
-          />
-          <div class="member-info">
-            <h3 class="member-name">Briane Willaims</h3>
-            <p class="member-position">Content Strategist</p>
-          </div>
-          <div class="member-icon">
-            <img
-              src="../../assets/images/companies/linkedin.svg"
-              alt="LinkedIn"
-            />
-          </div>
-        </div>
-        <div class="member-content">
-          <p class="member-bio">
-            Mike's creative approach to content creation has revolutionized how
-            our clients connect with their audience.
-          </p>
-        </div>
-      </div>
-
-      <div class="team-member">
-        <div class="member-header">
-          <img
-            src="../../assets/images/team-members/sarah_kim.svg"
-            alt="Sarah Kim"
-            class="member-image"
-          />
-          <div class="member-info">
-            <h3 class="member-name">Sarah Kim</h3>
-            <p class="member-position">Social Media Specialist</p>
-          </div>
-          <div class="member-icon">
-            <img
-              src="../../assets/images/companies/linkedin.svg"
-              alt="LinkedIn"
-            />
-          </div>
-        </div>
-        <div class="member-content">
-          <p class="member-bio">
-            Sarah's innovative social media strategies have helped our clients
-            build strong online communities and increase brand engagement.
-          </p>
-        </div>
+      <div class="team-button">
+        <app-button text="See all team" />
       </div>
     </div>
-
-    <div class="team-button">
-      <app-button text="See all team" />
-    </div>
-  </div>
+  </ng-container>
 </section>
