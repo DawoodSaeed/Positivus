@@ -1,0 +1,84 @@
+footer {
+  background-color: #292A32;
+  padding: 60px 0;
+  color: white;
+}
+
+.footer-logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: var(--color-primary);
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.contact-box, .subscribe-box {
+  padding: 20px;
+  border-radius: 14px;
+  height: 100%;
+}
+
+.contact-box {
+  background-color: var(--color-primary);
+}
+
+.subscribe-box {
+  background-color: #292A32;
+}
+
+.form-control {
+  border-radius: 14px;
+  border: none;
+}
+
+.btn {
+  border-radius: 45px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+}
+
+@media (max-width: 767px) {
+  .col-md-4, .col-md-6 {
+    margin-bottom: 30px;
+  }
+  
+  .d-flex.justify-content-between {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .d-flex.justify-content-between img {
+    margin: 10px;
+  }
+}

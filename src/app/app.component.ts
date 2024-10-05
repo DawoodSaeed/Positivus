@@ -8,6 +8,7 @@ import { CaseStudyComponent } from './case-study/case-study.component';
 import { OurWorkingProcessComponent } from './our-working-process/our-working-process.component';
 import { TeamsComponent } from './teams/teams.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     OurWorkingProcessComponent,
     TeamsComponent,
     ContactUsComponent,
-  ],
+    FooterComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
