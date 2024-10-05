@@ -4,7 +4,11 @@
       <div class="navbar__logo">
         <img src="../../assets/images/Logo.svg" alt="" />
       </div>
-      <ul class="nav__list">
+
+      <div class="navbar__toggle" (click)="toggleMobileMenu()">
+        <img src="../../assets/images/menu_icon.svg" alt="menu icon" />
+      </div>
+      <ul class="nav__list" [class.active]="isMobileMenuOpen">
         <li><a href="#" class="nav__link">About us</a></li>
         <li><a href="#" class="nav__link">Services</a></li>
         <li><a href="#" class="nav__link">Use Cases</a></li>
