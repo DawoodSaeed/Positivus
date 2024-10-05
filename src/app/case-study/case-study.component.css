@@ -1,0 +1,92 @@
+.case-study {
+  padding: 60px 0;
+}
+
+.case-study__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 30px;
+
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.case-study__grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.case-study__grid {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.case-study__item {
+  padding: 30px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--btn-background);
+  border-radius: 20px;
+}
+
+.case-study__item h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.case-study__item p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.arrow-icon {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+/* Desktop and tablet styles */
+@media (min-width: 768px) {
+  .case-study__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    overflow-x: hidden;
+    background-color: var(--btn-background);
+    border-radius: 20px;
+    gap: 30px;
+  }
+
+  .case-study__item {
+    padding: 40px;
+  }
+
+  .case-study__item h3 {
+    font-size: 28px;
+  }
+
+  .case-study__item p {
+    font-size: 18px;
+  }
+
+  .learn-more {
+    font-size: 18px;
+  }
+}

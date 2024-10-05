@@ -15,6 +15,8 @@
   --color-primary: hsl(87, 100%, 70%);
   --color-text: hsl(0, 0%, 20%);
   --color-background: hsl(0, 0%, 100%);
+  --btn-background: hsl(234, 17%, 12%);
+  --btn-background-hover: hsl(234, 17%, 19%);
 }
 
 input,
@@ -33,7 +35,7 @@ body {
 
 /* Container for main content */
 .container {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
