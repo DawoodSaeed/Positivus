@@ -11,7 +11,7 @@
 
   <app-our-working-process />
 
-  @defer (on interaction; prefetch on idle){
+  @defer (on viewport; prefetch on idle){
   <app-teams />
   }@loading(minimum 1000ms) {
   <div class="loading-spinner">
