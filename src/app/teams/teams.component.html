@@ -1,5 +1,5 @@
 <section class="teams">
-  <ng-container *ngIf="imagesLoaded$ | async">
+  <ng-container *ngIf="imagesLoaded$ | async; else loading">
     <!-- Content will be rendered once images are loaded -->
     <div class="container">
       <app-heading
@@ -172,4 +172,12 @@
       </div>
     </div>
   </ng-container>
+
+  <ng-template #loading>
+    <p>Loading team members...</p>
+    <div class="loading-spinner">
+      <div class="spinner-circle"></div>
+      <div class="spinner-text">Loading amazing team...</div>
+    </div>
+  </ng-template>
 </section>
