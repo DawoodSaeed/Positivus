@@ -12,9 +12,9 @@
 
 :root {
   --font-main: "Space Grotesk", sans-serif;
-  --color-primary: #b9ff66;
-  --color-text: #333;
-  --color-background: #ffffff;
+  --color-primary: hsl(87, 100%, 70%);
+  --color-text: hsl(0, 0%, 20%);
+  --color-background: hsl(0, 0%, 100%);
 }
 
 input,
