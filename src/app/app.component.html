@@ -11,14 +11,21 @@
 
   <app-our-working-process />
 
-  @defer (on viewport; prefetch on idle){
-  <app-teams />
-  }@loading(minimum 1000ms) {
+  <!-- Teams Component -->
+  @defer (on viewport; prefetch on idle) {
+  <app-teams #teams />
+  {{ loaded() }}
+  } @loading {
   <div class="loading-spinner">
     <div class="spinner-circle"></div>
     <div class="spinner-text">Loading Team Component...</div>
   </div>
-  }@placeholder {
-  <p>loading the team component</p>
+  } @placeholder {
+  <p>Loading the team component...</p>
+  }
+
+  <!-- Contact Us Component -->
+  @defer (when teamsLoaded) {
+  <app-contact-us />
   }
 </div>

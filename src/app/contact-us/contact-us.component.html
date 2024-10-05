@@ -1,0 +1,79 @@
+<section class="contact-us">
+  <div class="row">
+    <div class="col-md-6">
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <div class="radio-group">
+          <label class="radio-container">
+            Say Hi
+            <input
+              type="radio"
+              name="contactType"
+              value="sayHi"
+              [(ngModel)]="contactType"
+            />
+            <span class="checkmark"></span>
+          </label>
+          <label class="radio-container">
+            Get a Quote
+            <input
+              type="radio"
+              name="contactType"
+              value="getQuote"
+              [(ngModel)]="contactType"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            [(ngModel)]="name"
+            required
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            [(ngModel)]="email"
+            required
+            email
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message"
+            [(ngModel)]="message"
+            required
+            class="form-control"
+            rows="6"
+          ></textarea>
+        </div>
+
+        <app-button text="Send Message" type="submit"></app-button>
+      </form>
+    </div>
+    <div class="col-md-6" class="contact-us-bg">
+      <img
+        src="../../assets/images/contact-us-bg.svg"
+        alt="Contact Us"
+        class="img-fluid h-100"
+      />
+    </div>
+  </div>
+</section>
