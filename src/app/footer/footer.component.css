@@ -87,6 +87,8 @@
   border-radius: 14px;
   border: 1px solid #ffffff;
   background-color: transparent;
+  color: white;
+  font: inherit;
 }
 
 .newsletter button {

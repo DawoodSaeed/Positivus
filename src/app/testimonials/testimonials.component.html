@@ -1,0 +1,27 @@
+<div class="testimonial-slider">
+  <div class="testimonial-container">
+    <div
+      class="testimonial"
+      *ngFor="let testimonial of testimonials; let i = index"
+      [hidden]="i !== currentIndex"
+    >
+      <p class="testimonial-text">{{ testimonial.text }}</p>
+      <div class="testimonial-author">
+        <p class="author-name">{{ testimonial.author }}</p>
+        <p class="author-title">{{ testimonial.title }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <button class="arrow-left" (click)="prevTestimonial()">&larr;</button>
+    <div class="dots">
+      <span
+        class="dot"
+        *ngFor="let testimonial of testimonials; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="currentIndex = i"
+      ></span>
+    </div>
+    <button class="arrow-right" (click)="nextTestimonial()">&rarr;</button>
+  </div>
+</div>

@@ -12,215 +12,51 @@ interface Testimonial {
   selector: 'app-testimonials',
   standalone: true,
   imports: [CommonModule],
-  template: `
-    <div class="testimonial-slider">
-      <div class="testimonial-container" [@slideAnimation]="currentIndex">
-        <div
-          *ngFor="let testimonial of testimonials; let i = index"
-          class="testimonial"
-          [class.active]="i === currentIndex"
-        >
-          <div class="quote-container">
-            <p class="quote">{{ testimonial.quote }}</p>
-          </div>
-          <div class="author-info">
-            <p class="author">{{ testimonial.author }}</p>
-            <p class="position">{{ testimonial.position }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="navigation">
-        <button class="nav-button prev" (click)="prevSlide()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        <div class="dots">
-          <span
-            *ngFor="let dot of testimonials; let i = index"
-            class="dot"
-            [class.active]="i === currentIndex"
-            (click)="goToSlide(i)"
-          ></span>
-        </div>
-        <button class="nav-button next" (click)="nextSlide()">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-      </div>
-    </div>
-  `,
-  styles: [
-    `
-      .testimonial-slider {
-        background-color: #1c1c1c;
-        color: white;
-        padding: 2rem;
-        border-radius: 1rem;
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .testimonial-container {
-        position: relative;
-        height: 200px;
-        overflow: hidden;
-      }
-
-      .testimonial {
-        position: absolute;
-        width: 100%;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-      }
-
-      .testimonial.active {
-        opacity: 1;
-      }
-
-      .quote-container {
-        background-color: #2a2a2a;
-        border: 1px solid #7cfc00;
-        border-radius: 1rem;
-        padding: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      .quote {
-        font-size: 1rem;
-        line-height: 1.5;
-      }
-
-      .author-info {
-        text-align: center;
-      }
-
-      .author {
-        font-weight: bold;
-        color: #7cfc00;
-        margin-bottom: 0.25rem;
-      }
-
-      .position {
-        font-size: 0.9rem;
-        color: #cccccc;
-      }
-
-      .navigation {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1rem;
-      }
-
-      .nav-button {
-        background: none;
-        border: none;
-        color: #7cfc00;
-        cursor: pointer;
-        font-size: 1.5rem;
-        padding: 0.5rem;
-      }
-
-      .nav-button svg {
-        width: 24px;
-        height: 24px;
-      }
-
-      .dots {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 1rem;
-      }
-
-      .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #444;
-        margin: 0 0.25rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .dot.active {
-        background-color: #7cfc00;
-      }
-    `,
-  ],
-  animations: [
-    trigger('slideAnimation', [
-      transition('* => *', [
-        style({ transform: 'translateX(100%)' }),
-        animate('500ms ease-in-out', style({ transform: 'translateX(0%)' })),
-      ]),
-    ]),
-  ],
+  templateUrl: './testimonials.component.html',
+  styleUrls: ['./testimonials.component.css'],
 })
-export class TestimonialsComponent implements OnInit {
-  testimonials: Testimonial[] = [
+export class TestimonialsComponent {
+  testimonials = [
     {
-      quote:
-        'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.',
+      text: '“We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.”',
       author: 'John Smith',
-      position: 'Marketing Director at XYZ Corp',
+      title: 'Marketing Director at XYZ Corp',
     },
     {
-      quote:
-        'Positivus has transformed our digital marketing strategy. Their innovative approach and dedication to results have significantly boosted our online visibility and customer engagement.',
+      text: '"Positivus has been instrumental in transforming our digital marketing strategy. Their innovative approach and data-driven insights have helped us reach new audiences and increase our conversion rates. The team\'s dedication and expertise are truly impressive."',
       author: 'Sarah Johnson',
-      position: 'CEO at ABC Industries',
+      title: 'CEO of TechInnovate Solutions',
     },
     {
-      quote:
-        "The expertise and creativity of the Positivus team have been instrumental in our company's growth. They've helped us navigate the complex digital landscape with ease.",
-      author: 'Michael Brown',
-      position: 'Operations Manager at 123 Solutions',
+      text: '"We were struggling to stand out in a crowded market until we partnered with Positivus. Their creative campaigns and SEO strategies have significantly boosted our online visibility. The results speak for themselves - our web traffic has doubled, and our sales have increased by 30%."',
+      author: 'Michael Chen',
+      title: 'Founder of GreenEco Products',
+    },
+    {
+      text: '"The team at Positivus goes above and beyond. They not only delivered a stunning website redesign but also provided valuable insights into our overall digital strategy. Their holistic approach to digital marketing has helped us achieve consistent growth quarter after quarter."',
+      author: 'Emily Rodriguez',
+      title: 'CMO at HealthFirst Clinics',
+    },
+    {
+      text: '"As a small business owner, I was hesitant to invest in digital marketing. Positivus understood our budget constraints and tailored a strategy that maximized our ROI. Their personalized approach and attention to detail have made all the difference in our online success."',
+      author: 'David Thompson',
+      title: 'Owner of Artisan Crafts Co.',
     },
   ];
 
   currentIndex = 0;
 
-  ngOnInit() {
-    this.startAutoSlide();
-  }
-
-  prevSlide() {
+  prevTestimonial() {
     this.currentIndex =
-      (this.currentIndex - 1 + this.testimonials.length) %
-      this.testimonials.length;
+      this.currentIndex > 0
+        ? this.currentIndex - 1
+        : this.testimonials.length - 1;
   }
 
-  nextSlide() {
-    this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
-  }
-
-  goToSlide(index: number) {
-    this.currentIndex = index;
-  }
-
-  private startAutoSlide() {
-    setInterval(() => {
-      this.nextSlide();
-    }, 5000); // Change slide every 5 seconds
+  nextTestimonial() {
+    this.currentIndex =
+      this.currentIndex < this.testimonials.length - 1
+        ? this.currentIndex + 1
+        : 0;
   }
 }

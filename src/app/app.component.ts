@@ -9,6 +9,7 @@ import { OurWorkingProcessComponent } from './our-working-process/our-working-pr
 import { TeamsComponent } from './teams/teams.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
+import { TestimonialsComponent } from "./testimonials/testimonials.component";
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     TeamsComponent,
     ContactUsComponent,
     FooterComponent,
-  ],
+    TestimonialsComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
