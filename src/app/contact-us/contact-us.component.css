@@ -4,6 +4,7 @@
   padding-bottom: 60px;
   background: #f3f3f3;
   border-radius: 45px;
+  overflow-x: hidden; /* Add this to prevent horizontal overflow */
 }
 
 .row {
@@ -133,8 +134,11 @@ textarea.form-control {
   .contact-us-bg {
     display: inline-block;
     position: absolute;
-    right: -320px;
+    right: 0; /* Change this from -320px to 0 */
     top: 0px;
+    max-width: 50%; /* Add this to ensure the image doesn't overflow */
+    height: 100%; /* Add this to make the image fill the height */
+    object-fit: cover; /* Add this to maintain aspect ratio while filling */
   }
 }
 

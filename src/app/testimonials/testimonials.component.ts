@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { HeadingComponent } from '../heading/heading.component';
 
 interface Testimonial {
   quote: string;
@@ -11,7 +12,7 @@ interface Testimonial {
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeadingComponent],
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.css'],
 })
@@ -45,18 +46,40 @@ export class TestimonialsComponent {
   ];
 
   currentIndex = 0;
+  cardWidth = 600;
 
-  prevTestimonial() {
-    this.currentIndex =
-      this.currentIndex > 0
-        ? this.currentIndex - 1
-        : this.testimonials.length - 1;
+  prevTestimonial(element: HTMLElement) {
+    if (this.currentIndex <= 0) {
+      this.currentIndex = this.testimonials.length - 1;
+      element.scrollLeft = (this.testimonials.length - 1) * this.cardWidth;
+    } else {
+      this.currentIndex--;
+      element.scrollLeft -= this.cardWidth;
+    }
+    this.updateActiveClass();
   }
 
-  nextTestimonial() {
-    this.currentIndex =
-      this.currentIndex < this.testimonials.length - 1
-        ? this.currentIndex + 1
-        : 0;
+  nextTestimonial(element: HTMLElement) {
+    if (this.currentIndex >= this.testimonials.length - 1) {
+      this.currentIndex = 0;
+      element.scrollLeft = 0;
+    } else {
+      this.currentIndex++;
+      element.scrollLeft += this.cardWidth;
+    }
+    this.updateActiveClass();
+  }
+
+  updateActiveClass() {
+    const testimonials = document.querySelectorAll(
+      '.testimonial > .testimonial-text'
+    );
+    testimonials.forEach((testimonial, index) => {
+      if (index === this.currentIndex) {
+        testimonial.classList.add('active');
+      } else {
+        testimonial.classList.remove('active');
+      }
+    });
   }
 }
