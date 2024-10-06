@@ -116,14 +116,6 @@ main {
   padding: 2rem 0;
 }
 
-/* Footer styles */
-footer {
-  background-color: #333;
-  color: #ffffff;
-  text-align: center;
-  padding: 1rem 0;
-}
-
 /* Responsive design */
 @media (max-width: 1024px) {
   /* Add styles for tablets */

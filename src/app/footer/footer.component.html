@@ -1,94 +1,40 @@
-<footer
-  class="footer"
-  style="background: #191a23; border-radius: 45px 45px 0 0; padding: 40px 0"
->
-  <!-- First row -->
-  <div class="row mb-5">
-    <div class="col-md-4">
-      <img src="assets/logo.png" alt="Positivus Logo" class="img-fluid" />
-    </div>
-    <div class="col-md-4">
-      <ul class="list-unstyled">
-        <li><a href="#" class="text-white">About us</a></li>
-        <li><a href="#" class="text-white">Services</a></li>
-        <li><a href="#" class="text-white">Use Cases</a></li>
-        <li><a href="#" class="text-white">Pricing</a></li>
-        <li><a href="#" class="text-white">Blog</a></li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <div class="d-flex justify-content-between">
-        <img
-          src="assets/companies/company1.png"
-          alt="Company 1"
-          class="img-fluid"
-        />
-        <img
-          src="assets/companies/company2.png"
-          alt="Company 2"
-          class="img-fluid"
-        />
-        <img
-          src="assets/companies/company3.png"
-          alt="Company 3"
-          class="img-fluid"
-        />
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <div class="logo">
+        <img src="../../assets/images/logo_white.svg" alt="Positivus" />
       </div>
-    </div>
-  </div>
-
-  <!-- Second row -->
-  <div class="row mb-5">
-    <div class="col-md-6">
-      <div
-        class="p-4"
-        style="
-          background-color: var(--color-primary);
-          color: white;
-          border-radius: 14px;
-        "
-      >
-        <h5 class="mb-3">Contact us:</h5>
+      <div class="contact-info">
+        <p class="contact-label">Contact us:</p>
         <p>Email: info&#64;positivus.com</p>
         <p>Phone: 555-567-8901</p>
-        <p>Address: 1234 Main St<br />Moonstone City, Stardust State 12345</p>
+        <div>
+          <p>Address: 1234 Main St</p>
+          <p>Moonstone City, Stardust State 12345</p>
+        </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="p-4" style="background: #292a32; border-radius: 14px">
-        <h5 class="text-white mb-3">Subscribe to news</h5>
-        <form class="d-flex">
-          <input
-            type="email"
-            class="form-control me-2"
-            placeholder="Enter your email"
-            style="background: white; border-radius: 14px"
-          />
-          <button
-            type="submit"
-            class="btn"
-            style="
-              background-color: var(--color-primary);
-              color: white;
-              border-radius: 45px;
-            "
-          >
-            Submit
-          </button>
-        </form>
+    <div class="footer-right">
+      <div class="footer-nav-container">
+        <nav class="footer-nav">
+          <a href="#">About us</a>
+          <a href="#">Services</a>
+          <a href="#">Use Cases</a>
+          <a href="#">Pricing</a>
+          <a href="#">Blog</a>
+        </nav>
+        <div class="social-icons">
+          <img src="../../assets/images/icon_row.svg" alt="Amazon" />
+        </div>
+      </div>
+      <div class="newsletter">
+        <input type="email" [(ngModel)]="email" placeholder="Email" />
+        <button (click)="subscribeToNews()">Subscribe to news</button>
       </div>
     </div>
   </div>
-
-  <hr class="bg-white" />
-
-  <!-- Third row -->
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <p class="text-white">&copy; 2023 Positivus. All Rights Reserved.</p>
-    </div>
-    <div class="col-md-6 text-end">
-      <a href="#" class="text-white">Privacy Policy</a>
-    </div>
+  <div class="footer-bottom">
+    <div>&copy; 2023 Positivus. All Rights Reserved.</div>
+    <a href="#">Privacy Policy</a>
   </div>
 </footer>
